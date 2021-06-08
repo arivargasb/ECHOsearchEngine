@@ -1,0 +1,11 @@
+flask==1.1.2
+gunicorn==19.9.0
+numpy==1.19.2
+matplotlib==3.3.0
+pandas==1.2.1
+pickle==4.0
+gunicorn==20.1.0
+spacy==2.3.0
+rank-bm25==0.2.1
+nmslib==2.1.1
+request==2.25.1

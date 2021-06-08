@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Sessions retrieval app
+		</div>
+		<h2>Search engine for content covered during ECHO sessions</h2>
+		
+	</div>
+	</header>
+	<h2 style="color:blue;font-size:20;"><b>Results</b></h2>
+	<div class="results">
+		
+
+	<p style="color:blue;">Search result 1: {{retrieval5}}</p>
+    <p style="color:blue;">Search result 2: {{retrieval4}}</p>
+    <p style="color:blue;">Search result 3: {{retrieval3}}</p>
+    <p style="color:blue;">Search result 4: {{retrieval2}}</p>
+    <p style="color:blue;">Search result 5: {{retrieval1}}</p>
+
+	</div>
+
+</body>
+</html>
