@@ -1,1 +1,1 @@
-web: gunicorn echo-search.wsgi
+web: gunicorn app:app
