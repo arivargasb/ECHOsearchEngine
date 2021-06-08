@@ -3,7 +3,7 @@ gunicorn==19.9.0
 numpy==1.19.2
 matplotlib==3.3.0
 pandas==1.2.1
-pickle==4.0
+pickle
 gunicorn==19.9.0
 spacy==2.3.0
 rank-bm25==0.2.1
