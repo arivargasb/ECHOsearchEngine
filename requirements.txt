@@ -1,4 +1,4 @@
-python==3.7.7
+python==3.7
 flask==1.1.2
 gunicorn==19.9.0
 numpy==1.19.2
