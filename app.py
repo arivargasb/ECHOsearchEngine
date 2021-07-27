@@ -38,22 +38,19 @@ def search():
 	index = nmslib.init(method='hnsw', space='cosinesimil')
 	index.addDataPointBatch(data)
 	index.createIndex({'post': 2}, print_progress=True)
-
-	input = 'hydroxychloroquine'.lower().split()
-
-
-	query = [ft_model[vec] for vec in input]
-	query = np.mean(query,axis=0)
-
-	ids, distances = index.knnQuery(query, k=5)
-
+	
+	# ids, distances = index.knnQuery(query, k=1)
 	if request.method == 'POST':
-		for i,j in zip(ids,distances):
-			my_search = df.date.values
-		return render_template('result.html', retrieval1 = my_search[0],
-		retrieval2 = my_search[1], retrieval3 = my_search[2], retrieval4 = my_search[3],
-		retrieval5 = my_search[4])
+		x= request.form['word']
+		# x = x.lower().split()
+		query = [ft_model[vec] for vec in x]
+		query = np.mean(query,axis=0)
+		ids, distances = index.knnQuery(query, k=51)
+		mysearch=[]
+		for i in ids:
+			mysearch.append(df.date.values[i])
+		return render_template('result.html', retrieval1 = mysearch[0])
 
 
 if __name__ == '__main__':
-	app.run(debug=True)
+	app.run(debug=True, host='0.0.0.0', port=9696)

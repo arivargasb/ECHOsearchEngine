@@ -3,7 +3,6 @@ gunicorn
 numpy
 matplotlib
 pandas
-gunicorn
 spacy
 rank-bm25
 nmslib
